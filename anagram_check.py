@@ -1,3 +1,18 @@
+# Anagram Check
+# input 'abc dcf','fcd cba'
+
+def anagram(s1,s2):
+    s1=s1.replace(' ','').lower()
+    s2=s2.replace(' ','').lower()
+    #edge case
+    if len(s1)!=len(s2):
+        return False
+    if sorted(s1)==sorted(s2):
+        return True
+    else:
+        return False
+
+
 def anagram1(s1,s2):
     s1=s1.replace(' ','').lower()
     s2=s2.replace(' ','').lower()
@@ -21,4 +36,5 @@ def anagram1(s1,s2):
     return True
 
 if __name__=="__main__":
+    print(anagram('abc','cba'))
     print(anagram1('abc','cba'))

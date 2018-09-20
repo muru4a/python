@@ -1,5 +1,5 @@
 #reverse interger
-def reverse(s):
+def reverse1(s):
     if s < 0:
         return -reverse(-s)
     result=0
@@ -10,4 +10,5 @@ def reverse(s):
 
 
 if __name__ == "__main__":
-    print(reverse(456))
+    print(reverse(121))
+    print(reverse1(456))

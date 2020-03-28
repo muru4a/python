@@ -2,6 +2,8 @@
 # Input : abcbabcbcdddd
 # output: cbabc
 
+
+
 def LongestPalindrome(s):
     left=0
     right=0
@@ -14,11 +16,25 @@ def LongestPalindrome(s):
             right=i+lenval/2
     return s[left:right+1]
 
+
 def expandaroundcenter(s,left,right):
-    while (left>=0 and right<len(s) and s[left] == s[right]):
-        left=left-1
-        right=right+1
-    return right-left-1
+    leftIndex =0
+    rightIndex =0
+    while (left>=0 and right<len(s)):
+        if (s[left] == s[right]):
+            leftIndex= left
+            rightIndex = right
+        else:
+            break
+        left-=1
+        right+=1
+    return s[leftIndex: rightIndex+1]
+
+
+
+
+
+
 
 
 

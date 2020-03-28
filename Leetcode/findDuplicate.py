@@ -27,4 +27,72 @@ def findDuplicate( nums):
             nums_set.add(i)
 
 
-print(findDuplicate([1,3,4,2,2]))
+#print(findDuplicate([1,3,4,2,2]))
+
+
+def find_duplicate(nums):
+    result=[]
+    counter=0
+    for i in nums:
+        if i in result:
+            counter = counter+1
+            if counter > 1:
+                return i
+        else:
+            result.append(i)
+
+
+
+print(find_duplicate([1,3,4,2,2]))
+
+
+#input -- Array(1,2,3,1,4,3,6,8)
+#
+# output --
+#
+#
+# find out duplicates -
+#
+#     1 - 2
+#     3 - 2
+
+
+def find_count_dups(nums):
+    flag = False
+    result = []
+    for i in nums:
+        if i in result:
+            flag =True
+            continue
+        else:
+            counter = 0
+            for j in nums:
+                if i == j:
+                    counter =counter +1
+            if counter >1 :
+                return (i,counter)
+            result.append(i)
+    if flag == False :
+        print("no duplicates")
+
+print(find_count_dups([1,2,3,1,4,3,6,8]))
+
+
+def find_count_dups1(nums):
+    result = {}
+    #result = {x:nums.count(x) for x in nums}
+    for i in nums:
+        result[i] = nums.count(i)
+    for key,value in result.items():
+        return (key,value)
+
+print(find_count_dups1([1,2,3,1,4,3,6,8]))
+
+
+
+
+
+
+
+
+

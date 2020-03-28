@@ -8,7 +8,7 @@ class Solution(object):
                 return [i,nums.index(k,i+1)]
         return None
 
-    p1 = Solution([1, 1, 3, 4, 5, 8, 6, 9], 10)
+   # p1 = Solution([1, 1, 3, 4, 5, 8, 6, 9], 10)
 
 if __name__ == '__main__':
     p1=Solution([1,1,3,4,5,8,6,9],10)
